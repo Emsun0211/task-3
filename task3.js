@@ -5,11 +5,14 @@
 const getMin = (arr) => {
 	// Initialize the min value as the first element of the array
 	let min = arr[0];
-	// Map over the arry
-	arr.forEach((el) => {
+
+	for (let i = 1; i < arr.length; i++) {
 		// check if the element is smaller than the min value and assign it to the min value
-		if (el < min) min = el;
-	});
+		if (arr[i] < min) {
+			console.log(arr[i], min);
+			min = arr[i];
+		}
+	}
 	// return the minimum value
 	return min;
 };
